@@ -10,6 +10,8 @@ drive="/dev/sda"
 #
 # modify the lines below at your own risk
 #
+# ensure we are in root home folder
+cd ~
 # install unzip and build-essential to build udpbd server later
 apt install -y unzip build-essential
 #git clone https://github.com/israpps/udpbd-server.git
