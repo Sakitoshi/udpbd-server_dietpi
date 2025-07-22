@@ -50,4 +50,4 @@ echo "lease {
   expire never;
 }" >> /etc/dhcp/dhclient.conf
 # all done, let's leave a file to know
-touch all_done
+touch ../all_done
