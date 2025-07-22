@@ -30,7 +30,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/home/dietpi/udpbd-server/udpbd-server $drive
+ExecStart=/root/udpbd-server/udpbd-server $drive
 Restart=always
 
 [Install]
