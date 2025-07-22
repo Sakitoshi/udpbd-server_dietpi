@@ -38,16 +38,22 @@ Restart=always
 [Install]
 WantedBy=multi-user.target" > udpbd-server.service
 systemctl enable --now ./udpbd-server.service
-# set dhcp timeout to 5 seconds to get a fixed ip faster
+# set dhcp timeout to 5 seconds to get a fallback static ip faster
 echo "timeout 5;" >> /etc/dhcp/dhclient.conf
-# set a fixed ip
-echo "lease {
+# set a fallback static ip
+lease="lease {
   interface "eth0";
   fixed-address $staticAddr;
   option subnet-mask 255.255.255.0;
   renew never;
   rebind never;
   expire never;
-}" >> /etc/dhcp/dhclient.conf
+}"
+echo "$lease" >> /etc/dhcp/dhclient.conf
+# make sure by adding entries on all lease files
+echo "$lease" > /var/lib/dhcp/dhclient.leases
+leasesHeader=$(head -1 /var/lib/dhcp/dhclient.eth0.leases)
+echo "$leasesHeader" > /var/lib/dhcp/dhclient.eth0.leases
+echo "$lease" >> /var/lib/dhcp/dhclient.eth0.leases
 # all done, let's leave a file to know
 touch ../all_done
