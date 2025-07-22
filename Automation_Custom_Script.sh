@@ -32,7 +32,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/root/udpbd-server/udpbd-server $drive
+ExecStart=$HOME/udpbd-server/udpbd-server $drive
 Restart=always
 
 [Install]
