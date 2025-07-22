@@ -2,7 +2,7 @@
 Automation script to set up a NanoPi NEO-LTS fresh install of dietpi as a udpbd server for PS2
 
 # Instructions:
-1. Flash a SD card with DietPi (https://dietpi.com/)
+1. Flash a SD card with DietPi (https://dietpi.com/). Small SD card recommended, 2GB minimum
 2. Go into your SD card
 3. Open _dietpi.txt_ with a text editor
 4. Change the default password _AUTO_SETUP_GLOBAL_PASSWORD=dietpi_
