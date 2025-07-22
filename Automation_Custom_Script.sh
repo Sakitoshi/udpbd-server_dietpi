@@ -50,10 +50,5 @@ lease="lease {
   expire never;
 }"
 echo "$lease" >> /etc/dhcp/dhclient.conf
-# make sure by adding entries on all lease files
-echo "$lease" > /var/lib/dhcp/dhclient.leases
-leasesHeader=$(head -1 /var/lib/dhcp/dhclient.eth0.leases)
-echo "$leasesHeader" > /var/lib/dhcp/dhclient.eth0.leases
-echo "$lease" >> /var/lib/dhcp/dhclient.eth0.leases
 # all done, let's leave a file to know
 touch ../all_done
