@@ -8,8 +8,8 @@ Automation script to set up a NanoPi NEO-LTS fresh install of dietpi as a udpbd 
 4. Change the default password _AUTO_SETUP_GLOBAL_PASSWORD=dietpi_
 5. Change regional setting if you want _AUTO_SETUP_LOCALE=C.UTF-8_, _AUTO_SETUP_KEYBOARD_LAYOUT=latam_, _AUTO_SETUP_TIMEZONE=America/Santiago_
 6. Change _AUTO_SETUP_CUSTOM_SCRIPT_EXEC=0_ to _AUTO_SETUP_CUSTOM_SCRIPT_EXEC=https://github.com/Sakitoshi/udpbd-server_dietpi/raw/refs/heads/main/Automation_Custom_Script.sh_
-7. Alternatively, you can leave _AUTO_SETUP_CUSTOM_SCRIPT_EXEC=0_ as is and copy _Automation_Custom_Script.sh_ to the sd card instead
-8. You may need to do this if you want to change its static IP address or specify a drive partition to use as udpbd drive. More details bellow
+7. Alternatively, you can leave _AUTO_SETUP_CUSTOM_SCRIPT_EXEC=0_ as is and copy _Automation_Custom_Script.sh_ to the SD card instead
+8. You may need to do this if you want to change your NanoPi static IP address or specify a drive partition to use as udpbd drive. More details below
 9. Change _AUTO_SETUP_AUTOMATED=0_ to _AUTO_SETUP_AUTOMATED=1_
 10. Change _SURVEY_OPTED_IN=-1_ to _SURVEY_OPTED_IN=0_
 11. Eject your SD card and insert it into you NanoPi
