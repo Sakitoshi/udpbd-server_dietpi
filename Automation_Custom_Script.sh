@@ -42,7 +42,7 @@ systemctl enable --now ./udpbd-server.service
 echo "timeout 5;" >> /etc/dhcp/dhclient.conf
 # set a fallback static ip
 lease="lease {
-  interface "eth0";
+  interface \"eth0\";
   fixed-address $staticAddr;
   option subnet-mask 255.255.255.0;
   renew never;
