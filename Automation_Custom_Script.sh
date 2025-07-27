@@ -3,7 +3,7 @@
 # this will also serve as the ip is gonna get if connected directly to the ps2
 staticAddr="192.168.1.9"
 
-# replace this if your drive is recognized 
+# replace this if your drive is recognized under a different device name
 # it would typicaly be "sda" or "sda1"
 drive="/dev/sda"
 
